@@ -8,9 +8,10 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-gscom = function(repo='Intro-to-R',user='vpran',com = 'commit')
+gscom = function(com = 'commit')
 {
-  shell(paste("C: & cd C:/Users/",user,'/Documents/GitHub/',repo," & git.exe pull & git.exe add . & git.exe commit -m ",com," & git.exe push origin master",sep = ''))
+  wd = getwd()
+  shell(paste("cd ",wd," & git.exe pull & git.exe add . & git.exe commit -m ",com," & git.exe push origin master",sep = ''))
   cat("\014")
   write("", file=".blank")
   loadhistory(".blank")
