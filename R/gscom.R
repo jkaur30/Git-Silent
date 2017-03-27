@@ -19,10 +19,6 @@ gscom = function(com = 'commit')
         # in case the "try" part was completed successfully
         wd = getwd()
         shell(paste("cd ",wd," & git.exe pull & git.exe add . & git.exe commit -m ",com," & git.exe push origin master",sep = ''))
-        cat("\014")
-        write("", file=".blank")
-        loadhistory(".blank")
-        unlink(".blank")
         # The return value of `readLines()` is the actual value
         # that will be returned in case there is no condition
         # (e.g. warning or error).
@@ -49,6 +45,10 @@ gscom = function(com = 'commit')
         # If you want more than one expression to be executed, then you
         # need to wrap them in curly brackets ({...}); otherwise you could
         # just have written 'finally=<expression>'
+        cat("\014")
+        write("", file=".blank")
+        loadhistory(".blank")
+        unlink(".blank")
       }
     )
     return(out)
