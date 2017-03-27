@@ -27,17 +27,15 @@ gscom = function(com = 'commit')
       },
       error=function(cond) {
         cat("\014")
-        message("Here's the error message:")
-        message(cond)
+        message("Here's the error message: You are not in the working directory for the repo")
         # Choose a return value in case of error
-        return(NA)
+        return(message(cond))
       },
       warning=function(cond) {
         cat("\014")
-        message("Here's the original warning message:")
-        message(cond)
+        message("Here's the original warning message: You are not in the working directory for the repo")
         # Choose a return value in case of warning
-        return(NULL)
+        return(message(cond))
       },
       finally={
         # NOTE:
