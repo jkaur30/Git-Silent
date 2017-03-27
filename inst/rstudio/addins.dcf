@@ -1,0 +1,4 @@
+Name: silentGITcommit
+Description: Silently Commits GIT and clears history
+Binding: gscom
+Interactive: false
