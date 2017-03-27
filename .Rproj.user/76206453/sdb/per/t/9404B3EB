@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# You can learn more about package authoring with RStudio at:\n#\n#   http://r-pkgs.had.co.nz/\n#\n# Some useful keyboard shortcuts for package authoring:\n#\n#   Build and Reload Package:  'Ctrl + Shift + B'\n#   Check Package:             'Ctrl + Shift + E'\n#   Test Package:              'Ctrl + Shift + T'\n\ngscom = function(repo='Intro-to-R',user='vpran',com = 'commit')\n{\n  shell(paste(\"C: & cd C:/Users/\",user,'/Documents/GitHub/',repo,\" & git.exe pull & git.exe add . & git.exe commit -m \",com,\" & git.exe push origin master\",sep = ''))\n  cat(\"\\014\")\n  write(\"\", file=\".blank\")\n  loadhistory(\".blank\")\n  unlink(\".blank\")\n}\n\n",
+    "created" : 1490642902067.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4235705170",
+    "id" : "9404B3EB",
+    "lastKnownWriteTime" : 1490644259,
+    "last_content_update" : 1490644259497,
+    "path" : "~/GitHub/gscom/R/gscom.R",
+    "project_path" : "R/gscom.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
