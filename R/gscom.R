@@ -49,5 +49,5 @@ gscom = function(com = 'commit')
         unlink(".blank")
       }
     )
-    return(out)
+    return("You're All Set !! ;)")
 }
