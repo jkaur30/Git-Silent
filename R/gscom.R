@@ -26,12 +26,14 @@ gscom = function(com = 'commit')
         # for the condition handlers for warnings and error below)
       },
       error=function(cond) {
+        cat("\014")
         message("Here's the error message:")
         message(cond)
         # Choose a return value in case of error
         return(NA)
       },
       warning=function(cond) {
+        cat("\014")
         message("Here's the original warning message:")
         message(cond)
         # Choose a return value in case of warning
@@ -44,7 +46,6 @@ gscom = function(com = 'commit')
         # If you want more than one expression to be executed, then you
         # need to wrap them in curly brackets ({...}); otherwise you could
         # just have written 'finally=<expression>'
-        cat("\014")
         write("", file=".blank")
         loadhistory(".blank")
         unlink(".blank")
@@ -52,4 +53,3 @@ gscom = function(com = 'commit')
     )
     return(out)
 }
-
