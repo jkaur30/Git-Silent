@@ -1,4 +1,4 @@
-# gscom
+# Git Silent Commit
 Git Silent Commit helps clear your workspace, pull/push changes onto your git repo and clear your console. All at the click of a button.
 
 Steps:
