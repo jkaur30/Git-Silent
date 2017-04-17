@@ -17,7 +17,7 @@ gscom = function(com = 'commit')
         # use curly brackets.
         # 'tryCatch()' will return the last evaluated expression
         # in case the "try" part was completed successfully
-        system2(paste("cd ",getwd()," & git.exe pull & git.exe add . & git.exe commit -m ",com," & git.exe push origin master",sep = ''))
+        shell(paste("cd ",getwd()," & git.exe pull & git.exe add . & git.exe commit -m ",com," & git.exe push origin master",sep = ''))
         cat("\014")
         # The return value of `readLines()` is the actual value
         # that will be returned in case there is no condition
