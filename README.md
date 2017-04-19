@@ -1,6 +1,8 @@
 # Git Silent Commit
 Git Silent Commit helps clear your workspace, pull/push changes onto your git repo and clear your console. All at the click of a button.
 
+Currently: Windows Only
+
 Steps:
 1) Install the package in RStudio
 2) Assign a quick access key from the add-in menu
